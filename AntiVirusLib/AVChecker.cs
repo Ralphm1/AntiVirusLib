@@ -8,6 +8,13 @@ namespace AntiVirusLib
 {
     public class AVChecker
     {
+        /// <summary>
+        /// Scans the named file, in the file path.
+        /// If the file is found to contain a virus, the file will be removed
+        /// and a string response will be provided.
+        /// </summary>
+        /// <param name="filePath">The file path.</param>
+        /// <returns>String.</returns>
         public String ScanFile(String filePath)
         {
             Scanner scanner = new Scanner();
@@ -16,6 +23,13 @@ namespace AntiVirusLib
             return result;
         }
 
+        /// <summary>
+        /// Scans the named file, in the file path.
+        /// If the file is found to contain a virus, the file will be removed
+        /// and a numeric (enumerated) response will be provided.
+        /// </summary>
+        /// <param name="filePath">The file path.</param>
+        /// <returns>ScanResult (an enumerated response).</returns>
         public ScanResult ScanFileEnum(String filePath)
         {
             Scanner scanner = new Scanner();
